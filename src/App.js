@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
 import './App.css';
+import { AboutPage } from './components/AboutPage';
+import { MapPage } from './components/MapPage';
+
+const Wrapper = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Switch>
+        <Route path='/' exact component={MapPage} />
+        <Route path='/about' component={AboutPage} />
+        <Redirect to='/' />
+      </Switch>
+    </Wrapper>
   );
 }
 
