@@ -7,17 +7,19 @@ const initialState = {
         zoom: 3.5
     },
     markers: [
-        {   
+        {   id: 0,
             title: 'Marker 1! 👋',
             latitude: 61.60,
             longitude: 98.75,
         },
         {   
+            id: 1,
             title: 'Marker 2! 👋',
             latitude: 64.60,
             longitude: 91.75,
         },
         {   
+            id: 2,
             title: 'Marker 3! 👋',
             latitude: 57.60,
             longitude: 85.75,
